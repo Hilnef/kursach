@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/konki.css">
+    <script src="../css/main.js" defer></script>
+    <script src="../css/m.js" defer></script>
+    <title>Toronto shop</title>
+    <style>
+        /* Стили для модального окна с формой */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            animation: animatetop 0.4s;
+        }
+
+        @keyframes animatetop {
+            from {opacity:0; transform: translateY(-50px)}
+            to {opacity:1; transform: translateY(0)}
+        }
+
+        .form-title {
+            text-align: center;
+            color: rgba(41, 37, 126, 1);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .required-field::after {
+            content: " *";
+            color: red;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit {
+            background-color: rgba(41, 37, 126, 1);
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background-color: rgba(30, 26, 106, 1);
+        }
+
+        .btn-cancel {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        .btn-cancel:hover {
+            background-color: #ddd;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        .copyable-phone {
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+        }
+
+        .copyable-phone:hover {
+            color: #d5d3d3;
+        }
+
+        .copy-notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 1001;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <div class="text">
+                <p class="left">TORONTO MAPLE LEAFS</p>
+                <div class="right">
+                    <a href="brends.html" style="margin-right: 0%;">
+                    <p> Бренды </p>
+                    </a>
+                    <a href="korzina.html">
+                        <p>Отзывы</p>
+                    </a>
+                    <p id="phoneNumber" class="copyable-phone">+375447238618</p>
+                    <div class="copy-notification">Номер скопирован!</div>
+                    <button class="burger" id="burger" style="height: 110%;">☰</button>
+                </div>
+            </div>
+        </div>
+        <h1 class="TORONTO">Toronto Maple Leafs Shop</h1>
+    </header>
+    <div class="navo">
+        <div class="text">
+            <img src="../Фото/Главная/Toronto Maple Leafs Alternate Logo History.svg" alt="">
+            <h2><a href="main.html">Основная</a></h2>
+            <h2><a href="razmer.html">Размерные таблицы</a></h2>
+            <h2><a href="about.html">О магазине</a></h2>
+            <h2><a href="gifts.html">Подарочные сертификаты</a></h2>
+        </div>
+    </div>
+    
+    <main>
+        <p>КРАГИ CCM</p>
+        <div class="gridat">
+            <div class="ok">
+                <img src="../Фото/краги/6.jpeg" alt="">
+            </div>
+            <div class="telo">
+                <h2>799.00 BYN</h2>
+                <div class="star">
+                    <img src="../Фото/Карточки/Star.svg" alt="">
+                    <img src="../Фото/Карточки/Star.svg" alt="">
+                    <img src="../Фото/Карточки/Star.svg" alt="">
+                    <img src="../Фото/Карточки/Star.svg" alt="">
+                    <img src="../Фото/Карточки/Star.svg" alt="">
+                </div>
+                <h3>Описание: КРАГИ CCM оснащены прочными, легкими стаканами Tuuk Lightspeed Edge, передняя
+                    и задняя стойка которых выше на 3 мм, чем у традиционных стаканов, что увеличивает угол атаки и
+                    уменьшает радиус разворота и в результате повышает маневренность игрока.</h3>
+                <div class="ht">
+                    <h3>Производитель : BAUER</h3>
+                    <h3>Размер: Взрослый (SR)</h3>
+                    <h3 style="margin-bottom: 10%;">Уровень: Профессиональный</h3>
+                </div>
+                <div class="spis">
+                    <h3>Выберите параметры</h3>
+                    <div class="select-container">
+                        <div class="select-button">Размер</div>
+                        <div class="select-dropdown">
+                            <a href="#">JR</a>
+                            <a href="#">SR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parametr">
+            <div class="deliv">
+                <img src="../Фото/Карточки/Vector.svg" alt="">
+                <h4>Доставка по Беларуси</h4>
+            </div>
+            <div class="out">
+                <img src="../Фото/Карточки/Vector1.svg" alt="">
+                <h4>Самовывоз</h4>
+            </div>
+            <div class="pay">
+                <img src="../Фото/Карточки/v3.svg" alt="">
+                <h4>Любые способы оплаты</h4>
+            </div>
+        </div>
+        <div class="aplep">
+            <img src="../Фото/Карточки/pay.svg" alt="">
+            <h3 id="buyButton">Купить</h3>
+        </div>
+        <div class="sss">
+            <h1>Похожие товары:</h1>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <a href="h4.html" style="color: inherit; text-decoration: none;">
+                <h4>КРАГИ WARRIOR</h4>
+                <img src="../Фото/краги/4.jpg" alt="" style="border-radius: 0px;">
+                <div class="twoelem" style="margin-bottom: 8%; ">
+                    <div class="avail" ><p>В наличии</p></div>
+                    <p>799.00 BYN</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="h5.html" style="color: inherit; text-decoration: none;">
+                <h4>КРАГИ BAUER</h4>
+                <img src="../Фото//краги/5.jpg" alt="" style="border-radius: 0px;">
+                <div class="twoelem" style="margin-bottom: 8%; ">
+                    <div class="avail" ><p>В наличии</p></div>
+                    <p>299.00 BYN</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="h6.html" style="color: inherit; text-decoration: none;">
+                <h4>КРАГИ CCM </h4>
+                <img src="../Фото/краги/6.jpeg" alt="" style="border-radius: 0px;">
+                <div class="twoelem" style="margin-bottom: 8%; ">
+                    <div class="avail" ><p>В наличии</p></div>
+                    <p>1999.00 BYN</p>
+                </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="form-title">Оформление заказа</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="email" class="required-field">Электронная почта</label>
+                    <input type="email" id="email" required>
+                    <div class="error-message" id="emailError">Пожалуйста, введите корректный email</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="required-field">Номер телефона</label>
+                    <input type="tel" id="phone" required>
+                    <div class="error-message" id="phoneError">Пожалуйста, введите номер телефона</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address" class="required-field">Адрес доставки</label>
+                    <input type="text" id="address" required>
+                    <div class="error-message" id="addressError">Пожалуйста, введите адрес</div>
+                </div>
+                
+                <div class="form-buttons">
+                    <button type="button" class="btn btn-cancel" id="cancelOrder">Отмена</button>
+                    <button type="submit" class="btn btn-submit">Подтвердить заказ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">
+            <img src="../Фото/Главная/Bauer.png" alt="">
+            <img src="../Фото/Главная/CCM.png" alt="">
+            <img src="../Фото/Главная/Easton.png" alt="">
+            <img src="../Фото/Главная/Fischer.png" alt="">
+            <img src="../Фото/Главная/MAD GUY.png" alt="">
+            <img src="../Фото/Главная/Reebok.png" alt="">
+            <img src="../Фото/Главная/SHERWOOD.png" alt="">
+            <img src="../Фото/Главная/TRUE.png" alt="">
+            <img src="../Фото/Главная/Warrior.png" alt="">
+        </div>
+        <div class="twz">
+            <h5>© 2007-2025 © <span class="toto">TORONTO MAPLE LEAFS </span></h5>
+            <h5>«Магазин хоккейной экипировки»</h5>
+            <h5>Беларусь, Минск, улица Белорусская, 21, 706А</h5>
+            <h5>тел.: +375 44 723 86 18</h5>
+            <h5>gmail : vladkostuykevich@gmail.com</h5>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('phoneNumber').addEventListener('click', function() {
+            const phoneNumber = this.textContent;
+            navigator.clipboard.writeText(phoneNumber).then(() => {
+                const notice = document.querySelector('.copy-notification');
+                notice.style.opacity = '1';
+                setTimeout(() => {
+                    notice.style.opacity = '0';
+                }, 2000);
+            }).catch(err => {
+                console.error('Ошибка копирования: ', err);
+            });
+        });
+
+        const orderModal = document.getElementById('orderModal');
+        const buyBtn = document.getElementById('buyButton');
+        const closeBtn = document.querySelector('.close');
+        const cancelBtn = document.getElementById('cancelOrder');
+        const orderForm = document.getElementById('orderForm');
+
+        buyBtn.addEventListener('click', () => {
+            orderModal.style.display = 'flex';
+        });
+
+        function closeModal() {
+            orderModal.style.display = 'none';
+        }
+
+        closeBtn.addEventListener('click', closeModal);
+        cancelBtn.addEventListener('click', closeModal);
+
+        window.addEventListener('click', (e) => {
+            if (e.target === orderModal) {
+                closeModal();
+            }
+        });
+
+        orderForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+
+            const email = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            if (!email.value || !email.value.includes('@')) {
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+            }
+
+            const phone = document.getElementById('phone');
+            const phoneError = document.getElementById('phoneError');
+            if (!phone.value) {
+                phoneError.style.display = 'block';
+                isValid = false;
+            } else {
+                phoneError.style.display = 'none';
+            }
+
+            const address = document.getElementById('address');
+            const addressError = document.getElementById('addressError');
+            if (!address.value) {
+                addressError.style.display = 'block';
+                isValid = false;
+            } else {
+                addressError.style.display = 'none';
+            }
+
+            if (isValid) {
+                alert('Заказ успешно оформлен! Мы свяжемся с вами в ближайшее время.');
+                orderForm.reset();
+                closeModal();
+            }
+        });
+
+        const selectContainer = document.querySelector('.select-container');
+        const selectButton = document.querySelector('.select-button');
+        const sizeOptions = document.querySelectorAll('.select-dropdown a'); 
+
+        selectButton.addEventListener('click', () => {
+            selectContainer.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!selectContainer.contains(event.target)) {
+                selectContainer.classList.remove('active');
+            }
+        });
+
+        sizeOptions.forEach(option => {
+            option.addEventListener('click', (event) => {
+                event.preventDefault(); 
+                const size = option.textContent; 
+                selectButton.textContent = `Размер: ${size}`; 
+                selectContainer.classList.remove('active'); 
+            });
+        });
+    </script>
+</body>
+</html>

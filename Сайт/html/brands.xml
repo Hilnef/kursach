@@ -1,0 +1,26 @@
+<brands>
+    <brand>
+        <name>CCM</name>
+        <image>../Фото/Бренды/CCM.png</image>
+        <description>CCM — один из ведущих производителей хоккейного снаряжения.</description>
+        <url>asortiment.html</url>
+    </brand>
+    <brand>
+        <name>Bauer</name>
+        <image>../Фото/Бренды/Bauer.svg</image>
+        <description>Bauer — это синоним хоккея с широким ассортиментом.</description>
+        <url>asortiment.html</url>
+    </brand>
+    <brand>
+        <name>Warrior</name>
+        <image>../Фото/Бренды/Warrior.png</image>
+        <description>Warrior объединяет стиль и производительность.</description>
+        <url>asortiment.html</url>
+    </brand>
+    <brand>
+        <name>Easton</name>
+        <image>../Фото/Бренды/Easton.svg</image>
+        <description>Easton известен своими инновационными клюшками.</description>
+         <url>asortiment.html</url>
+    </brand>
+</brands>

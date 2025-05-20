@@ -1,0 +1,372 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../Фото/Главная/bgr.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0%;
+}
+body .navo {
+  border-radius: 30px;
+  width: 57%;
+  height: 90px;
+  margin-top: 2%;
+  margin-bottom: 6%;
+  background-color: rgba(255, 255, 255, 0.705);
+  border: 5px solid rgb(41, 37, 126);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 5%;
+}
+body .navo .burger {
+  display: none;
+}
+body .navo .text {
+  font-size: 0.8vw;
+  align-items: center;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+body .navo .text a {
+  text-decoration: none;
+  color: inherit;
+  background-image: linear-gradient(to bottom, rgba(41, 37, 126, 0) 50%, rgb(247, 244, 255) 50%);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+body .navo .text a:hover {
+  color: rgb(247, 243, 255);
+  background-size: 100% 2px;
+}
+body .navo .text img {
+  border-radius: 15px;
+  width: 11.7%;
+}
+body header .TORONTO {
+  text-align: center;
+  margin-top: 7%;
+  color: rgb(41, 37, 126);
+  font-size: 5vh;
+}
+body header .head {
+  width: 100%;
+  height: 5%;
+  background-color: rgb(41, 37, 126);
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1000;
+}
+body header .head .text {
+  font-size: 1vw;
+  display: flex;
+  color: white;
+  white-space: nowrap;
+}
+body header .head .text .left {
+  margin-top: 0.8%;
+  margin-left: 18.5%;
+  margin-right: 27.5%;
+  align-items: center;
+}
+body header .head .text .right {
+  margin-top: -0.5%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+body header .head .text .right .burger {
+  display: none;
+}
+body header .head .text .right a {
+  margin-right: 20%;
+  margin-left: 20%;
+  text-decoration: none;
+  color: white;
+}
+body header .head .text .right a:hover {
+  color: rgb(213, 211, 211);
+  background-size: 100% 2px;
+}
+body header .head .text .right a p {
+  margin-right: 20%;
+}
+body main {
+  max-width: 63%;
+  margin-left: 19%;
+  margin-bottom: 0%;
+}
+body main h1 {
+  text-align: center;
+  color: rgb(41, 37, 126);
+  font-size: 3vw;
+  font-weight: 300;
+}
+body main .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+}
+body main .grid .card {
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 96%;
+  padding-bottom: 0%;
+  position: relative;
+  transition: transform 0.3s, filter 0.3s;
+}
+body main .grid .card:hover {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+body main .grid .card:hover .twoelem .avail {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+body main .grid .card h4 {
+  font-size: 0.7vw;
+  text-align: center;
+  font-weight: 300;
+  margin-left: 0%;
+  color: rgb(41, 37, 126);
+}
+body main .grid .card img {
+  border-radius: 30px;
+  margin-left: 5%;
+  width: 90%;
+  height: auto;
+  transition: transform 0.3s;
+}
+body main .grid .card .twoelem {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  height: 17%;
+}
+body main .grid .card .twoelem p {
+  color: rgb(243, 156, 18);
+  font-weight: 700;
+  margin-right: 5%;
+  margin-top: 3.2%;
+  font-size: 1vw;
+}
+body main .grid .card .twoelem .avail {
+  background-color: rgb(41, 37, 126);
+  border-radius: 0 30px 0 30px;
+  padding: 2% 6%;
+  margin-right: 10px;
+  margin-left: -4%;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+body main .grid .card .twoelem .avail p {
+  color: white;
+  font-size: 1.3vw;
+  margin: 0;
+  font-weight: 200;
+  margin-right: 0%;
+}
+body footer .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40%;
+  margin-top: 7%;
+  width: 19%;
+}
+body footer .twz {
+  color: rgba(0, 0, 0, 0.407);
+  margin-left: 19%;
+  line-height: 0.3;
+}
+body footer .twz .toto {
+  color: rgba(41, 37, 126, 0.61);
+}
+@media (max-width: 768px) {
+  body .navo {
+    position: relative;
+    border: 0px solid;
+    font-size: 20px;
+    height: 50%;
+    width: 100%;
+    margin-top: -11%;
+    margin-left: 0%;
+    text-align: right;
+    padding: 0% 0.3% 0.2% 0.2%;
+    border-radius: 0;
+  }
+  body .navo .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgb(41, 37, 126);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: max-height 0.9s ease;
+    max-height: 0;
+    overflow: hidden;
+  }
+  body .navo .text h2 {
+    font-size: 13px;
+    margin: 10px;
+  }
+  body .navo.active .text {
+    display: flex;
+    max-height: 200px;
+  }
+  body .navo img {
+    display: none;
+  }
+  body main {
+    max-width: 63%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+  }
+  body main .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  body main .grid .card {
+    height: 90%;
+  }
+  body main .grid .card .twoelem {
+    margin-left: -5%;
+  }
+  body main .grid .card .twoelem p {
+    margin-top: 4.4%;
+    font-size: 12px;
+  }
+  body main .grid .card .twoelem .avail {
+    width: 40%;
+  }
+  body main .grid .card .twoelem .avail p {
+    font-size: 14px;
+    margin: 3% 6% 3% 6%;
+  }
+  body main .grid .card h4 {
+    font-size: 12px;
+  }
+  body footer {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  body footer img {
+    max-width: 36%;
+  }
+  body footer .twz h5 {
+    font-size: 7px;
+  }
+  body footer .twz p {
+    font-size: 7px;
+  }
+  body header .TORONTO {
+    margin-top: 4.5%;
+    font-size: 5vw;
+  }
+  body header .head {
+    font-size: 8px;
+    border: 0px;
+    height: 3%;
+  }
+  body header .head .text .left {
+    margin-left: 20%;
+    margin-top: 1%;
+    margin-right: 19%;
+  }
+  body header .head .text .right {
+    margin-top: -0.3%;
+  }
+  body header .head .text .right .burger {
+    display: block;
+    font-size: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+  }
+  body header .head .text .right p {
+    margin-right: 10%;
+  }
+}
+@media (max-width: 480px) {
+  body .navo {
+    height: 40px;
+    padding: 0 10px;
+    margin-top: -28%;
+  }
+  body .navo .burger {
+    display: block !important;
+  }
+  body header .TORONTO {
+    font-size: 24px;
+    margin-top: 15%;
+  }
+  body header .head {
+    height: 30px;
+  }
+  body header .head .text {
+    font-size: 10px;
+  }
+  body header .head .text .left {
+    margin-top: 2.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  body header .head .text .right p {
+    margin-left: 0%;
+    font-size: 1.5vw;
+  }
+  body main {
+    margin-top: 25%;
+  }
+  body main h1 {
+    font-size: 20px;
+  }
+  body main .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  body main .grid .card h4 {
+    font-size: 14px;
+  }
+  body main .grid .card .twoelem p, body main .grid .card .twoelem .avail p {
+    font-size: 14px;
+  }
+  body footer .logo {
+    margin-left: 10%;
+    width: 80%;
+    flex-wrap: wrap;
+  }
+  body footer .logo img {
+    width: 15%;
+    margin: 5px;
+  }
+  body footer .twz {
+    margin-left: 18%;
+  }
+  body footer .twz h5, body footer .twz p {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=asortiment.css.map */
